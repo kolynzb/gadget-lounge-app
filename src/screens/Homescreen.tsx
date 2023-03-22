@@ -3,6 +3,7 @@ import React from 'react';
 import WelcomeHeaderSection from '../components/WelcomeHeaderSection';
 import {ScreenView, Spacer} from '../components/layout';
 import SearchBar from '../components/SearchBar';
+import SectionHeaderTitle from '../components/SectionHeaderTitle';
 
 type Props = {};
 
@@ -15,6 +16,8 @@ const Homescreen = (props: Props) => {
       />
       <Spacer size={15} />
       <SearchBar />
+      <Spacer size={15} />
+      <SectionHeaderTitle heading="Special Offers" />
     </ScreenView>
   );
 };
