@@ -4,9 +4,10 @@ const colors = {
   white: '#FFFFFF',
   background: '#eef0f3',
   gray: {
-    1: '#ECECEC',
+    1: '#C7C6C8',
     2: '#F5F5F5',
     3: '#C7C6C5',
+    4: '#ECECEC',
   },
   black: {
     1: '#101010',
