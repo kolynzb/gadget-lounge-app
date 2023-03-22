@@ -1,13 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import React from 'react';
+import {ScreenView} from '../components/layout';
 
 type Props = {};
 
 const TicketScreen = (props: Props) => {
   return (
-    <View>
+    <ScreenView>
       <Text>TicketsScreen</Text>
-    </View>
+    </ScreenView>
   );
 };
 
