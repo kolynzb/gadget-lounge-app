@@ -1,9 +1,4 @@
-import {
-  StyleSheet,
-  ViewStyle,
-  StyleProp,
-  SafeAreaView,
-} from 'react-native';
+import {StyleSheet, ViewStyle, StyleProp, SafeAreaView} from 'react-native';
 import React from 'react';
 
 type Props = {
@@ -22,5 +17,7 @@ const ScreenView = (props: Props) => {
 export default ScreenView;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    paddingHorizontal: 20,
+  },
 });
