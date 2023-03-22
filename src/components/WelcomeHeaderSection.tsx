@@ -25,8 +25,8 @@ const WelcomeHeaderSection = (props: Props) => {
         </View>
       </View>
       <View style={styles.rightcontainer}>
-        <Icon name="bell-outline" size="medium" color="gray" />
-        <Icon name="cards-heart-outline" size="medium" color="gray" />
+        <Icon name="bell-outline" size="extraLarge" color="gray" />
+        <Icon name="cards-heart-outline" size="extraLarge" color="gray" />
       </View>
     </View>
   );
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 20,
     paddingRight: 20,
-    backgroundColor: 'green',
   },
   avatar: {
     width: 50,
@@ -57,6 +56,10 @@ const styles = StyleSheet.create({
   },
   rightcontainer: {
     flexDirection: 'row',
+    backgroundColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: 45,
   },
   greeting: {
     color: colors.gray[2],
@@ -69,6 +72,7 @@ const styles = StyleSheet.create({
   },
   wordcontainer: {
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingVertical: 2,
   },
 });
