@@ -8,6 +8,7 @@ const SearchBar = (props: Props) => {
   return (
     <View style={styles.container}>
       <Text>SearchBar</Text>
+      
     </View>
   );
 };
