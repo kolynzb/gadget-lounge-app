@@ -5,6 +5,7 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
+import colors from '../../constants/colors';
 
 type TextProps = {
   children: React.ReactNode;
@@ -19,5 +20,6 @@ export default Text;
 const styles = StyleSheet.create({
   font: {
     fontFamily: 'Nunito-Regular',
+    color: colors.black[1],
   },
 });
