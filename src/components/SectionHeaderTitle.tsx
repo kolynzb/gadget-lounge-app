@@ -1,6 +1,7 @@
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Text, View} from './layout';
+import colors from '../constants/colors';
 
 type Props = {
   heading: string;
@@ -28,9 +29,11 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '700',
+    color: colors.black[1],
   },
   route: {
     fontWeight: '600',
+    color: colors.black[1],
   },
 });
