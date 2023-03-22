@@ -20,6 +20,6 @@ export default Text;
 const styles = StyleSheet.create({
   font: {
     fontFamily: 'Nunito-Regular',
-    color: colors.black[1],
+    // color: colors.black[1],
   },
 });
