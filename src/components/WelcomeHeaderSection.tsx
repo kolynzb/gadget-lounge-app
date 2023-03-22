@@ -25,8 +25,8 @@ const WelcomeHeaderSection = (props: Props) => {
         </View>
       </View>
       <View style={styles.rightcontainer}>
-        <Icon name="bell-outline" size="small" color="gray" />
-        <Icon name="cards-heart-outline" size="small" color="gray" />
+        <Icon name="bell-outline" size="medium" color="gray" />
+        <Icon name="cards-heart-outline" size="medium" color="gray" />
       </View>
     </View>
   );
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 2,
     resizeMode: 'cover',
+    overflow: 'hidden',
   },
   leftcontainer: {
     flexDirection: 'row',
