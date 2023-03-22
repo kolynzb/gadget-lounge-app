@@ -16,8 +16,10 @@ const Homescreen = (props: Props) => {
       />
       <Spacer size={15} />
       <SearchBar />
-      <Spacer size={15} />
+      <Spacer size={20} />
       <SectionHeaderTitle heading="Special Offers" />
+      <Spacer size={20} />
+      
     </ScreenView>
   );
 };
