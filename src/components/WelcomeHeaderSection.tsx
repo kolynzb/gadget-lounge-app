@@ -1,4 +1,4 @@
-import {Image, StyleSheet} from 'react-native';
+import {Image, ImageURISource, StyleSheet} from 'react-native';
 
 import React from 'react';
 import {Icon, Text, View} from './layout';
@@ -6,7 +6,7 @@ import colors from '../constants/colors';
 
 type Props = {
   name: string;
-  avatar: string;
+  avatar: ImageURISource['uri'];
 };
 
 const WelcomeHeaderSection = (props: Props) => {
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   },
   leftcontainer: {
     flexDirection: 'row',
+    alignCenter: 'center',
   },
   rightcontainer: {
     flexDirection: 'row',
