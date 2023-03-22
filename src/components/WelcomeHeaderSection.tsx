@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     width: 45,
   },
   greeting: {
-    color: colors.gray[2],
+    color: colors.gray[1],
     fontWeight: '100',
   },
   username: {
