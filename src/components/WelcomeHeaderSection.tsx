@@ -39,8 +39,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
   },
   avatar: {
     width: 50,
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
   },
   rightcontainer: {
     flexDirection: 'row',
-    backgroundColor: '#000',
+    // backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'space-between',
     width: 45,
