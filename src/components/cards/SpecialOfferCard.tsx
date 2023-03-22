@@ -11,11 +11,11 @@ type Props = {
 
 const SpecialOfferCard = (props: Props) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, styles.shadowProp]}>
       <View style={styles.leftcontainer}>
-        <Text>{props.percentage}%</Text>
-        <Text>{props.title}</Text>
-        <Text>{props.message}</Text>
+        <Text style={styles.percentage}>{props.percentage}%</Text>
+        <Text style={styles.title}>{props.title}</Text>
+        <Text style={styles.message}>{props.message}</Text>
       </View>
       <Image
         style={styles.image}
@@ -31,16 +31,27 @@ export default SpecialOfferCard;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
-    height: 100,
+    backgroundColor: '#CD0421',
+    height: 200,
     flexDirection: 'row',
-    borderRadius: 20,
+    borderRadius: 45,
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingHorizontal: 30,
+  },
+  shadowProp: {
+    shadowColor: '#CD0421',
+    // shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 1,
+    shadowRadius: 30,
+    elavation: 20,
   },
   leftcontainer: {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
+    height: '100%',
+    paddingVertical: 30,
+    width: '60%',
   },
   percentage: {
     fontSize: 30,
@@ -50,10 +61,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     color: 'white',
-    fontWeight: '600',
+    fontWeight: '700',
   },
   message: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'white',
     fontWeight: '400',
   },
