@@ -36,7 +36,7 @@ const Homescreen = (props: Props) => {
         />
         <Spacer size={20} />
         <FlatList
-          data={brands}
+          data={brands.slice(0, 8)}
           renderItem={({item}) => (
             <BrandIcon name={item.name} image={item.logo} />
           )}
