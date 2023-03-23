@@ -1,4 +1,4 @@
-import {StyleSheet, ScrollView, View} from 'react-native';
+import {StyleSheet, ScrollView, View, FlatList} from 'react-native';
 import React from 'react';
 import WelcomeHeaderSection from '../components/WelcomeHeaderSection';
 import {ScreenView, Spacer} from '../components/layout';
@@ -7,6 +7,7 @@ import SectionHeaderTitle from '../components/SectionHeaderTitle';
 import SpecialOfferCard from '../components/cards/SpecialOfferCard';
 import SmallFilterButton from '../components/buttons/SmallFilterButton';
 import ProductCard from '../components/cards/ProductCard';
+import products from '../data/products';
 
 type Props = {};
 
@@ -53,12 +54,19 @@ const Homescreen = (props: Props) => {
           </ScrollView>
         </View>
         <Spacer size={20} />
-        <ProductCard
-          name="Iphone 13 pro Max SE limited Edition"
-          price={4000000}
-          rating={4.3}
-          brand="äpple"
-          image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
+
+        <FlatList
+          data={products}
+          renderItem={({item}) => (
+            <ProductCard
+              name={item.name}
+              price={item.price}
+              rating={item.rating}
+              brand={item.brand}
+              image={item.image}
+            />
+          )}
+          numColumns={2}
         />
       </ScrollView>
     </ScreenView>
