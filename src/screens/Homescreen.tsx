@@ -40,7 +40,7 @@ const Homescreen = (props: Props) => {
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <SmallFilterButton text="All" active />
             <Spacer size={10} horizontal />
-            <SmallFilterButton text="Sumsang" />
+            <SmallFilterButton text="Samsang" />
             <Spacer size={10} horizontal />
             <SmallFilterButton text="Apple" />
             <Spacer size={10} horizontal />
@@ -53,7 +53,13 @@ const Homescreen = (props: Props) => {
           </ScrollView>
         </View>
         <Spacer size={20} />
-        <ProductCard image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg" />
+        <ProductCard
+          name="Iphone 13 pro Max SE limited Edition"
+          price={4000000}
+          rating={4.3}
+          brand="äpple"
+          image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
+        />
       </ScrollView>
     </ScreenView>
   );
