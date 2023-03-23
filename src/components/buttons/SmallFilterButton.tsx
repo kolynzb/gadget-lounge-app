@@ -1,4 +1,4 @@
-import {StyleSheet, Pressable, TouchableOpacity} from 'react-native';
+import {StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import {Text} from '../layout';
 import colors from '../../constants/colors';
@@ -10,17 +10,15 @@ type Props = {
 
 const SmallFilterButton = ({text, active = false}: Props) => {
   return (
-    <TouchableOpacity>
-      <Pressable
-        style={[
-          styles.button,
-          {backgroundColor: active ? colors.black[1] : 'white'},
-        ]}>
-        <Text style={[styles.text, {color: active ? 'white' : 'black'}]}>
-          {text}
-        </Text>
-      </Pressable>
-    </TouchableOpacity>
+    <Pressable
+      style={[
+        styles.button,
+        {backgroundColor: active ? colors.black[1] : 'white'},
+      ]}>
+      <Text style={[styles.text, {color: active ? 'white' : 'black'}]}>
+        {text}
+      </Text>
+    </Pressable>
   );
 };
 
