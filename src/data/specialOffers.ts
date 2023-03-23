@@ -1,5 +1,6 @@
 const specialOffers = [
   {
+    id: 0,
     percentage: 20,
     title: "Today's Special!",
     message: 'Get discount for every order, only valide for today',
