@@ -2,6 +2,7 @@ import {StyleSheet, Image, ImageURISource} from 'react-native';
 import React from 'react';
 import {Text, View} from './layout';
 import colors from '../constants/colors';
+import truncateString from '../utils/truncateString';
 
 type Props = {
   name: string;
@@ -17,7 +18,7 @@ const BrandIcon = (props: Props) => {
         }}
         style={styles.logo}
       />
-      <Text>BrandIcon</Text>
+      <Text>{truncateString(props.name, 8)}</Text>
     </View>
   );
 };
