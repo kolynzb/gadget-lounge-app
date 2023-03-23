@@ -8,6 +8,8 @@ import SpecialOfferCard from '../components/cards/SpecialOfferCard';
 import SmallFilterButton from '../components/buttons/SmallFilterButton';
 import ProductCard from '../components/cards/ProductCard';
 import products from '../data/products';
+import brands from '../data/brands';
+import BrandIcon from '../components/BrandIcon';
 
 type Props = {};
 
@@ -33,7 +35,13 @@ const Homescreen = (props: Props) => {
           image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
         />
         <Spacer size={20} />
-        {/* add list view here */}
+        <FlatList
+          data={brands}
+          renderItem={({item}) => (
+            <BrandIcon name={item.name} image={item.logo} />
+          )}
+          numColumns={4}
+        />
         <Spacer size={20} />
         <SectionHeaderTitle heading="Most Popular" />
         <Spacer size={20} />
