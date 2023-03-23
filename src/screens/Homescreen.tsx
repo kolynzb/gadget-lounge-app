@@ -18,40 +18,43 @@ const Homescreen = (props: Props) => {
         avatar="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
       />
       <Spacer size={15} />
-      <SearchBar />
-      <Spacer size={20} />
-      <SectionHeaderTitle heading="Special Offers" />
-      <Spacer size={20} />
+      <ScrollView>
+        <SearchBar />
+        <Spacer size={20} />
 
-      <SpecialOfferCard
-        percentage={20}
-        title="Today's Special!"
-        message="Get discount for every order, only valide for today"
-        image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
-      />
-      <Spacer size={20} />
-      {/* add list view here */}
-      <Spacer size={20} />
-      <SectionHeaderTitle heading="Most Popular" />
-      <Spacer size={20} />
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <SmallFilterButton text="All" active />
-          <Spacer size={10} horizontal />
-          <SmallFilterButton text="Sumsang" />
-          <Spacer size={10} horizontal />
-          <SmallFilterButton text="Apple" />
-          <Spacer size={10} horizontal />
-          <SmallFilterButton text="Lenovo" />
-          <Spacer size={10} horizontal />
-          <SmallFilterButton text="Google" />
-          <Spacer size={10} horizontal />
-          <SmallFilterButton text="Tecno" />
-          <Spacer size={10} horizontal />
-        </ScrollView>
-      </View>
-      <Spacer size={20} />
-      <ProductCard image="" />
+        <SectionHeaderTitle heading="Special Offers" />
+        <Spacer size={20} />
+
+        <SpecialOfferCard
+          percentage={20}
+          title="Today's Special!"
+          message="Get discount for every order, only valide for today"
+          image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
+        />
+        <Spacer size={20} />
+        {/* add list view here */}
+        <Spacer size={20} />
+        <SectionHeaderTitle heading="Most Popular" />
+        <Spacer size={20} />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <SmallFilterButton text="All" active />
+            <Spacer size={10} horizontal />
+            <SmallFilterButton text="Sumsang" />
+            <Spacer size={10} horizontal />
+            <SmallFilterButton text="Apple" />
+            <Spacer size={10} horizontal />
+            <SmallFilterButton text="Lenovo" />
+            <Spacer size={10} horizontal />
+            <SmallFilterButton text="Google" />
+            <Spacer size={10} horizontal />
+            <SmallFilterButton text="Tecno" />
+            <Spacer size={10} horizontal />
+          </ScrollView>
+        </View>
+        <Spacer size={20} />
+        <ProductCard image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg" />
+      </ScrollView>
     </ScreenView>
   );
 };
