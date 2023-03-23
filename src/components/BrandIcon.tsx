@@ -12,13 +12,15 @@ type Props = {
 const BrandIcon = (props: Props) => {
   return (
     <View style={styles.container}>
-      <Image
-        source={{
-          uri: props.image,
-        }}
-        style={styles.logo}
-      />
-      <Text>{truncateString(props.name, 8)}</Text>
+      <View style={styles.logocontainer}>
+        <Image
+          source={{
+            uri: props.image,
+          }}
+          style={styles.logo}
+        />
+      </View>
+      <Text style={styles.brand}>{truncateString(props.name, 8)}</Text>
     </View>
   );
 };
@@ -29,15 +31,21 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     alignItems: 'center',
+    height: 60,
   },
-  logo: {
+  logocontainer: {
     backgroundColor: colors.gray[4],
     borderRadius: 50,
+    width: 60,
+    height: 60,
+  },
+  logo: {
     width: 50,
     height: 50,
   },
   brand: {
     fontWeight: '400',
     fontSize: 14,
+    color: colors.black[1],
   },
 });
