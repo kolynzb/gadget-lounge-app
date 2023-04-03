@@ -41,11 +41,11 @@ export default ProductCard;
 
 const styles = StyleSheet.create({
   container: {
-    height: 450,
+    height: 320,
     // backgroundColor: 'red',
     // justifyContent: 'space-between',
     alignItems: 'flex-start',
-    width: 190,
+    width: 180,
   },
   bottomhalf: {
     justifyContent: 'space-between',

@@ -31,7 +31,9 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 60,
+    height: 80,
+    // backgroundColor: 'red',
+    // margin: 20,
   },
   logocontainer: {
     backgroundColor: colors.gray[4],

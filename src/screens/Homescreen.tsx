@@ -35,8 +35,11 @@ const Homescreen = (props: Props) => {
           image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
         />
         <Spacer size={20} />
+
         <FlatList
           data={brands.slice(0, 8)}
+          style={styles.brandlist}
+          ItemSeparatorComponent={() => <Spacer size={10} horizontal />}
           renderItem={({item}) => (
             <BrandIcon name={item.name} image={item.logo} />
           )}
@@ -64,6 +67,7 @@ const Homescreen = (props: Props) => {
         <Spacer size={20} />
 
         <FlatList
+          style={styles.productlist}
           data={products}
           renderItem={({item}) => (
             <ProductCard
@@ -74,7 +78,9 @@ const Homescreen = (props: Props) => {
               image={item.image}
             />
           )}
+          ItemSeparatorComponent={() => <Spacer size={20} horizontal />}
           numColumns={2}
+          // columnWrapperStyle={{justifyContent: 'center'}}
         />
       </ScrollView>
     </ScreenView>
@@ -83,4 +89,13 @@ const Homescreen = (props: Props) => {
 
 export default Homescreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  productlist: {
+    // justifyContent: 'space-between',
+    width: '100%',
+    // backgroundColor: 'green',
+  },
+  brandlist: {
+    backgroundColor: 'green',
+  },
+});

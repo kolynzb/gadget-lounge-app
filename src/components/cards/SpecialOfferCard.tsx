@@ -41,10 +41,13 @@ const styles = StyleSheet.create({
   },
   shadowProp: {
     shadowColor: '#CD0421',
-    // shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 1,
-    shadowRadius: 30,
-    elavation: 20,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.17,
+    shadowRadius: 2.54,
+    elevation: 3,
   },
   leftcontainer: {
     justifyContent: 'space-between',
