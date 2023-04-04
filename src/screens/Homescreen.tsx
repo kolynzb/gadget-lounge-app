@@ -40,6 +40,7 @@ const Homescreen = (props: Props) => {
           data={brands.slice(0, 8)}
           style={styles.brandlist}
           ItemSeparatorComponent={() => <Spacer size={10} horizontal />}
+          columnWrapperStyle={{justifyContent: 'space-between'}}
           renderItem={({item}) => (
             <BrandIcon name={item.name} image={item.logo} />
           )}
@@ -64,11 +65,12 @@ const Homescreen = (props: Props) => {
             <Spacer size={10} horizontal />
           </ScrollView>
         </View>
-        <Spacer size={20} />
+        <Spacer size={25} />
 
         <FlatList
           style={styles.productlist}
           data={products}
+          columnWrapperStyle={{justifyContent: 'space-between'}}
           renderItem={({item}) => (
             <ProductCard
               name={item.name}
@@ -93,9 +95,6 @@ const styles = StyleSheet.create({
   productlist: {
     // justifyContent: 'space-between',
     width: '100%',
-    // backgroundColor: 'green',
   },
-  brandlist: {
-    backgroundColor: 'green',
-  },
+  brandlist: {},
 });
