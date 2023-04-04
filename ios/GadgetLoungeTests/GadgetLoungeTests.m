@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface glmobileappTests : XCTestCase
+@interface GadgetLoungeTests : XCTestCase
 
 @end
 
-@implementation glmobileappTests
+@implementation GadgetLoungeTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.glmobileapp"
+    namespace "com.gadgetlounge"
     defaultConfig {
-        applicationId "com.glmobileapp"
+        applicationId "com.gadgetlounge"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

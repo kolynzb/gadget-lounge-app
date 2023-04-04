@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "glmobileapp.app"
-               BlueprintName = "glmobileapp"
-               ReferencedContainer = "container:glmobileapp.xcodeproj">
+               BuildableName = "GadgetLounge.app"
+               BlueprintName = "GadgetLounge"
+               ReferencedContainer = "container:GadgetLounge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "glmobileappTests.xctest"
-               BlueprintName = "glmobileappTests"
-               ReferencedContainer = "container:glmobileapp.xcodeproj">
+               BuildableName = "GadgetLoungeTests.xctest"
+               BlueprintName = "GadgetLoungeTests"
+               ReferencedContainer = "container:GadgetLounge.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "glmobileapp.app"
-            BlueprintName = "glmobileapp"
-            ReferencedContainer = "container:glmobileapp.xcodeproj">
+            BuildableName = "GadgetLounge.app"
+            BlueprintName = "GadgetLounge"
+            ReferencedContainer = "container:GadgetLounge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "glmobileapp.app"
-            BlueprintName = "glmobileapp"
-            ReferencedContainer = "container:glmobileapp.xcodeproj">
+            BuildableName = "GadgetLounge.app"
+            BlueprintName = "GadgetLounge"
+            ReferencedContainer = "container:GadgetLounge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

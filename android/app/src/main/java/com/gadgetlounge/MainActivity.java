@@ -1,4 +1,4 @@
-package com.glmobileapp;
+package com.gadgetlounge;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "glmobileapp";
+    return "GadgetLounge";
   }
 
   /**

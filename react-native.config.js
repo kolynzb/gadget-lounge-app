@@ -1,3 +1,4 @@
 module.exports = {
-  assets: ['./src/assets/fonts'],
+  root: true,
+  extends: '@react-native-community',
 };

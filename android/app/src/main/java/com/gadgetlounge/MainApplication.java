@@ -1,4 +1,4 @@
-package com.glmobileapp;
+package com.gadgetlounge;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
