@@ -93,7 +93,6 @@ export default Homescreen;
 
 const styles = StyleSheet.create({
   productlist: {
-    // justifyContent: 'space-between',
     width: '100%',
   },
   brandlist: {},
