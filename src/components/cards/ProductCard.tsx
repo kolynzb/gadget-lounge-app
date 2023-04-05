@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
     alignItems: 'flex-start',
     width: 180,
+    marginBottom: 20,
   },
   bottomhalf: {
     justifyContent: 'space-between',
