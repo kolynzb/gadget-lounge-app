@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 80,
-    // backgroundColor: 'red',
-    // margin: 20,
+    marginBottom: 20,
   },
   logocontainer: {
     backgroundColor: colors.gray[4],
