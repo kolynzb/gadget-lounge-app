@@ -1,4 +1,5 @@
 import React from 'react';
+import { ColorValue } from 'react-native';
 import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 MIcon.loadFont();
@@ -10,7 +11,7 @@ type IconSizeProps = {
 export interface IconProps {
   size: IconSizeProps['iconSizes'];
   name: React.ComponentProps<typeof MIcon>['name'];
-  color: string;
+  color: number | ColorValue | undefined;
   style?: any;
 }
 
