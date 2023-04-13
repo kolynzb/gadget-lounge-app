@@ -9,18 +9,18 @@ type Props = {
   image: ImageURISource['uri'];
 };
 
-const BrandIcon = (props: Props) => {
+const BrandIcon: React.FC<Props> = ({name, image}) => {
   return (
     <View style={styles.container}>
       <View style={styles.logocontainer}>
         <Image
           source={{
-            uri: props.image,
+            uri: image,
           }}
           style={styles.logo}
         />
       </View>
-      <Text style={styles.brand}>{truncateString(props.name, 8)}</Text>
+      <Text style={styles.brand}>{truncateString(name, 8)}</Text>
     </View>
   );
 };
