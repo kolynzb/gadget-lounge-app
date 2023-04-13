@@ -3,37 +3,59 @@ import React from 'react';
 import {Icon, Text, View} from '../layout';
 import colors from '../../constants/colors';
 import truncateString from '../../utils/truncateString';
+import {TouchableOpacity} from 'react-native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigation/RootTabNavigator';
+import {CompositeNavigationProp} from '@react-navigation/native';
+import BrandBadge from '../badges/BrandBadge';
+
+type ProductCardNavigationProp = CompositeNavigationProp<
+  NativeStackNavigationProp<RootStackParamList, 'ProductDetails'>,
+  NativeStackNavigationProp<RootStackParamList>
+>;
 
 type Props = {
-  image: ImageURISource['uri'];
-  name: string;
-  price: number;
-  rating: number;
-  brand: string;
+  navigation: ProductCardNavigationProp;
+  product: {
+    id: number;
+    name: string;
+    image: ImageURISource['uri'];
+    price: number;
+    rating: number;
+    brand: string;
+  };
 };
 
 const ProductCard = (props: Props) => {
+  const {navigation, product} = props;
+
+  const handlePress = () => {
+    navigation.navigate('ProductDetails', {
+      itemId: product.id,
+      otherParam: product.name,
+    });
+  };
   return (
-    <View style={styles.container}>
-      <View style={styles.imgcontainer}>
-        <Image style={styles.image} source={{uri: props.image}} />
-        <View style={styles.icon}>
-          <Icon name="cards-heart-outline" size="extraLarge" color="white" />
-        </View>
-      </View>
-      <View style={styles.bottomhalf}>
-        <Text style={styles.name}>{truncateString(props.name, 18)}</Text>
-        <View style={styles.middlesect}>
-          <Icon name="cards-heart-outline" size="extraLarge" color="black" />
-          <Text style={styles.rating}>{props.rating}</Text>
-          <Text style={styles.divider}>|</Text>
-          <View style={styles.brandcontainer}>
-            <Text style={styles.brand}>{props.brand}</Text>
+    <TouchableOpacity onPress={handlePress}>
+      <View style={styles.container}>
+        <View style={styles.imgcontainer}>
+          <Image style={styles.image} source={{uri: product.image}} />
+          <View style={styles.icon}>
+            <Icon name="cards-heart-outline" size="extraLarge" color="white" />
           </View>
         </View>
-        <Text style={styles.price}>UGX{props.price}</Text>
+        <View style={styles.bottomhalf}>
+          <Text style={styles.name}>{truncateString(product.name, 18)}</Text>
+          <View style={styles.middlesect}>
+            <Icon name="cards-heart-outline" size="extraLarge" color="black" />
+            <Text style={styles.rating}>{product.rating}</Text>
+            <Text style={styles.divider}>|</Text>
+            <BrandBadge brandname={product.brand} />
+          </View>
+          <Text style={styles.price}>UGX{product.price}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -89,21 +111,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: colors.black[1],
     marginVertical: 2,
-    opacity: 0.8,
-  },
-  brandcontainer: {
-    backgroundColor: colors.gray[1],
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    opacity: 0.5,
-  },
-  brand: {
-    fontWeight: '300',
-    fontSize: 14,
-    color: colors.black[1],
     opacity: 0.8,
   },
   divider: {
