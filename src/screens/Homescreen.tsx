@@ -10,8 +10,12 @@ import ProductCard from '../components/cards/ProductCard';
 import products from '../data/products';
 import brands from '../data/brands';
 import BrandIcon from '../components/BrandIcon';
+// import {HomeScreenNavigationProp} from '../types/navigation';
 
-type Props = {};
+type Props = {
+  navigation: any;
+  // navigation: HomeScreenNavigationProp ;
+};
 
 const Homescreen = (props: Props) => {
   return (
@@ -72,13 +76,7 @@ const Homescreen = (props: Props) => {
           data={products}
           columnWrapperStyle={{justifyContent: 'space-between'}}
           renderItem={({item}) => (
-            <ProductCard
-              name={item.name}
-              price={item.price}
-              rating={item.rating}
-              brand={item.brand}
-              image={item.image}
-            />
+            <ProductCard navigation={props.navigation} product={item} />
           )}
           ItemSeparatorComponent={() => <Spacer size={20} horizontal />}
           numColumns={2}
