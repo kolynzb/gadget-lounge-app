@@ -6,6 +6,8 @@ import {
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
 import AuthScreenStack from './AuthStack';
+import ProductDetailScreen from '../screens/ProductDetailScreen';
+import Homescreen from '../screens/Homescreen';
 
 declare global {
   namespace ReactNavigation {
@@ -19,6 +21,8 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   AuthStack: undefined;
+  Home: undefined;
+  ProductDetails: {itemId: number; otherParam: string};
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -38,6 +42,16 @@ const RootTabNavigator = () => {
             options={{headerShown: false}}
           />
           {/* Other screen go here */}
+          <Stack.Screen
+            name="Home"
+            component={Homescreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProductDetails"
+            component={ProductDetailScreen}
+            options={{headerShown: false}}
+          />
 
           {/* <Stack.Screen
             name="NotFound"
