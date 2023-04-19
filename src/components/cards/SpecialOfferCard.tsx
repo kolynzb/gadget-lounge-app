@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   image: {
-    width: 100,
-    height: 100,
-    resizeMode: 'cover'
+    width: 180,
+    height: 180,
+    resizeMode: 'cover',
   },
 });
