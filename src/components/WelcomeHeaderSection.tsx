@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 50,
     height: 50,
-    borderColor: 'red',
+    // borderColor: 'red',
     borderRadius: 50,
     borderWidth: 2,
     resizeMode: 'cover',
