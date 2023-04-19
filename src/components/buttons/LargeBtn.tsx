@@ -10,13 +10,13 @@ import Icon, {IconProps} from '../layout/Icon';
 
 interface CustomButtonProps extends TouchableOpacityProps {
   title: string;
-  iconname: IconProps['name'];
+  iconName: IconProps['name'];
   style?: ViewStyle;
 }
 
 const LargeBtn: FC<CustomButtonProps> = ({
   title,
-  iconname,
+  iconName,
   onPress,
   style,
   ...rest
@@ -26,7 +26,7 @@ const LargeBtn: FC<CustomButtonProps> = ({
       onPress={onPress}
       style={[styles.button, style]}
       {...rest}>
-      <Icon name={iconname} size="extraLarge" color="white" />
+      <Icon name={iconName} size="extraLarge" color="white" />
 
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
