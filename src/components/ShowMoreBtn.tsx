@@ -8,31 +8,33 @@ import {
 } from 'react-native';
 
 interface ShowMoreProps {
-  height?: number;
+  trimHeight?: number;
+  fullHeight?: number;
   showMoreText?: string;
   showLessText?: string;
   buttonColor?: string;
-  children: any;
+  children: React.ReactNode;
 }
 
 const ShowMore: React.FC<ShowMoreProps> = ({
-  height = 250,
+  trimHeight = 150,
+  fullHeight = trimHeight * 2,
   showMoreText = 'Show More',
   showLessText = 'Show Less',
   buttonColor = '#AAAAFF',
   children,
 }) => {
   const [showMoreBoxIsOpened, setShowMoreBoxIsOpened] = useState(false);
-  const [showMoreHeight, setShowMoreHeight] = useState(height);
+  const [showMoreHeight, setShowMoreHeight] = useState(trimHeight);
 
   const onPressShowMore = () => {
     setShowMoreBoxIsOpened(true);
-    setShowMoreHeight(0);
+    setShowMoreHeight(fullHeight);
   };
 
   const onPressShowLess = () => {
     setShowMoreBoxIsOpened(false);
-    setShowMoreHeight(height);
+    setShowMoreHeight(trimHeight);
   };
 
   return (
