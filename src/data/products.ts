@@ -8,6 +8,11 @@ const products: IProduct[] = [
     price: 4000000,
     rating: 4.3,
     reviews: 3600,
+    images: [
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      "'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg'",
+    ],
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, obcaecati pariatur? Quia, sint aliquam ullam eligendi magnam odit sapiente! Porro incidunt delectus pariatur impedit recusandae laboriosam sequi nihil maxime optio! Sequi praesentium dolores, quasi sed quas quos voluptatem libero culpa!',
     image:
@@ -20,6 +25,12 @@ const products: IProduct[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, obcaecati pariatur? Quia, sint aliquam ullam eligendi magnam odit sapiente! Porro incidunt delectus pariatur impedit recusandae laboriosam sequi nihil maxime optio! Sequi praesentium dolores, quasi sed quas quos voluptatem libero culpa!',
     price: 4000000,
+    images: [
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+    ],
+
     rating: 4.3,
     reviews: 3600,
     image:
@@ -32,6 +43,12 @@ const products: IProduct[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, obcaecati pariatur? Quia, sint aliquam ullam eligendi magnam odit sapiente! Porro incidunt delectus pariatur impedit recusandae laboriosam sequi nihil maxime optio! Sequi praesentium dolores, quasi sed quas quos voluptatem libero culpa!',
     price: 4000000,
+    images: [
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+    ],
+
     rating: 4.3,
     reviews: 3600,
     image:
@@ -44,6 +61,12 @@ const products: IProduct[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, obcaecati pariatur? Quia, sint aliquam ullam eligendi magnam odit sapiente! Porro incidunt delectus pariatur impedit recusandae laboriosam sequi nihil maxime optio! Sequi praesentium dolores, quasi sed quas quos voluptatem libero culpa!',
     price: 4000000,
+    images: [
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+      'https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg',
+    ],
+
     rating: 4.3,
     reviews: 3600,
     image:
