@@ -40,7 +40,7 @@ const ProductDetailScreenSample = (props: DetailsScreenProps) => {
           <Icon name="cards-heart-outline" size="extraLarge" color="white" />
         </View>
         <View style={styles.reviewSection}>
-          <BrandBadge brandname="apple" />
+          <BrandBadge brandName="apple" />
           <Icon name="cards-heart-outline" size="extraLarge" color="white" />
           <Text style={styles.paragraph}>4.9 (6,573 reviews)</Text>
         </View>
