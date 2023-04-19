@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     color: colors.gray[3],
   },
   price: {
-    fontWeight: '700',
+    fontWeight: '600',
     fontSize: 20,
     color: colors.black[1],
     opacity: 0.7,
