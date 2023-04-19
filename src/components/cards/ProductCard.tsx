@@ -38,19 +38,19 @@ const ProductCard = (props: Props) => {
   return (
     <TouchableOpacity onPress={handlePress}>
       <View style={styles.container}>
-        <View style={styles.imgcontainer}>
+        <View style={styles.imgContainer}>
           <Image style={styles.image} source={{uri: product.image}} />
           <View style={styles.icon}>
             <Icon name="cards-heart-outline" size="extraLarge" color="white" />
           </View>
         </View>
-        <View style={styles.bottomhalf}>
+        <View style={styles.bottomHalf}>
           <Text style={styles.name}>{truncateString(product.name, 18)}</Text>
-          <View style={styles.middlesect}>
+          <View style={styles.middleSection}>
             <Icon name="cards-heart-outline" size="extraLarge" color="black" />
             <Text style={styles.rating}>{product.rating}</Text>
             <Text style={styles.divider}>|</Text>
-            <BrandBadge brandname={product.brand} />
+            <BrandBadge brandName={product.brand} />
           </View>
           <Text style={styles.price}>UGX{product.price}</Text>
         </View>
@@ -70,29 +70,31 @@ const styles = StyleSheet.create({
     width: 180,
     marginBottom: 20,
   },
-  bottomhalf: {
+  bottomHalf: {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     width: '100%',
     paddingLeft: 3,
   },
-  middlesect: {
+  middleSection: {
     flexDirection: 'row',
     width: '80%',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 4,
   },
-  imgcontainer: {
+  imgContainer: {
     backgroundColor: colors.gray[2],
     height: 175,
     width: '100%',
     borderRadius: 15,
     marginBottom: 14,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     resizeMode: 'cover',
   },
   icon: {
