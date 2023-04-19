@@ -106,7 +106,6 @@ const ProductDetailScreen = (props: DetailsScreenProps) => {
           </View>
           <View style={styles.quantitySect}>
             <Text style={styles.subtitle}>Quantity</Text>
-            <Spacer size={20} horizontal />
             <QuantityBtn maxQuantity={5} />
           </View>
 
@@ -248,6 +247,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 20,
+    justifyContent: 'space-between',
   },
   cartBtn: {
     width: Dimensions.get('window').width * 0.6,
