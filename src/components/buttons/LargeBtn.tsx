@@ -25,7 +25,7 @@ const LargeBtn: FC<CustomButtonProps> = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={[styles.button, style]}
+      style={[styles.button, , styles.shadowProp, style]}
       {...rest}>
       <Icon name={iconName} size="extraLarge" color="white" />
 
@@ -46,9 +46,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#FFFFFF',
     paddingLeft: 10,
+  },
+  shadowProp: {
+    shadowColor: '#bcb5b5',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 12.81,
+    elevation: 16,
   },
 });
 
