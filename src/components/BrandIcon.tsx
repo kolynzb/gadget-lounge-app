@@ -12,7 +12,7 @@ type Props = {
 const BrandIcon: React.FC<Props> = ({name, image}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.logocontainer}>
+      <View style={styles.logoContainer}>
         <Image
           source={{
             uri: image,
@@ -34,11 +34,14 @@ const styles = StyleSheet.create({
     height: 80,
     marginBottom: 20,
   },
-  logocontainer: {
+  logoContainer: {
     backgroundColor: colors.gray[4],
     borderRadius: 50,
     width: 60,
     height: 60,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logo: {
     width: 50,
