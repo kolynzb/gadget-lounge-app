@@ -17,7 +17,7 @@ type Props = {
   // navigation: HomeScreenNavigationProp ;
 };
 
-const Homescreen = (props: Props) => {
+const HomeScreen = (props: Props) => {
   return (
     <ScreenView>
       <WelcomeHeaderSection
@@ -35,14 +35,14 @@ const Homescreen = (props: Props) => {
         <SpecialOfferCard
           percentage={20}
           title="Today's Special!"
-          message="Get discount for every order, only valide for today"
+          message="Get discount for every order, only valid for today"
           image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
         />
         <Spacer size={20} />
 
         <FlatList
           data={brands.slice(0, 8)}
-          style={styles.brandlist}
+          style={styles.brandList}
           ItemSeparatorComponent={() => <Spacer size={10} horizontal />}
           columnWrapperStyle={{justifyContent: 'space-between'}}
           renderItem={({item}) => (
@@ -72,7 +72,7 @@ const Homescreen = (props: Props) => {
         <Spacer size={25} />
 
         <FlatList
-          style={styles.productlist}
+          style={styles.productList}
           data={products}
           columnWrapperStyle={{justifyContent: 'space-between'}}
           renderItem={({item}) => (
@@ -87,11 +87,11 @@ const Homescreen = (props: Props) => {
   );
 };
 
-export default Homescreen;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
-  productlist: {
+  productList: {
     width: '100%',
   },
-  brandlist: {},
+  brandList: {},
 });
