@@ -12,19 +12,19 @@ type Props = {
 const WelcomeHeaderSection = (props: Props) => {
   return (
     <View style={styles.container}>
-      <View style={styles.leftcontainer}>
+      <View style={styles.leftContainer}>
         <Image
           style={styles.avatar}
           source={{
             uri: props.avatar,
           }}
         />
-        <View style={styles.wordcontainer}>
+        <View style={styles.wordContainer}>
           <Text style={styles.greeting}>Good Morning 👋🏿</Text>
           <Text style={styles.username}>{props.name}</Text>
         </View>
       </View>
-      <View style={styles.rightcontainer}>
+      <View style={styles.rightContainer}>
         <Icon name="bell-outline" size="extraLarge" color="gray" />
         <Icon name="cards-heart-outline" size="extraLarge" color="gray" />
       </View>
@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     overflow: 'hidden',
   },
-  leftcontainer: {
+  leftContainer: {
     flexDirection: 'row',
     alignCenter: 'center',
   },
-  rightcontainer: {
+  rightContainer: {
     flexDirection: 'row',
     // backgroundColor: '#000',
     alignItems: 'center',
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 18,
   },
-  wordcontainer: {
+  wordContainer: {
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 2,
