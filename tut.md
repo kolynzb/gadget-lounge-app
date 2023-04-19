@@ -7,6 +7,7 @@
 - [react-native-shadow-generator](https://10015.io/tools/react-native-shadow-generator)
 - [](https://www.appsloveworld.com/reactjs/100/7/how-to-create-two-columns-with-space-beetwen-in-react-native-flatlist)
 
-- [Using react-native-vector-isons in IOS and Android](https://aboutreact.com/react-native-vector-icons/)
+- [Using react-native-vector-icons in IOS and Android](https://aboutreact.com/react-native-vector-icons/)
 
 - [Phone slider](https://youtu.be/ucpoqa2-74s)
+- [Sliders](https://youtu.be/2TgArwz6je8)
