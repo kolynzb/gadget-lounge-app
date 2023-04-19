@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   DetailsScreenNavigationProps,
   DetailsScreenRouteProps,
@@ -11,6 +11,8 @@ import Divider from '../components/layout/Divider';
 import BrandBadge from '../components/badges/BrandBadge';
 import ShowMore from '../components/ShowMoreBtn';
 import LargeBtn from '../components/buttons/LargeBtn';
+import {IProduct} from '../interfaces/product.interface';
+import products from '../data/products';
 
 type DetailsScreenProps = {
   route: DetailsScreenRouteProps;
@@ -19,39 +21,34 @@ type DetailsScreenProps = {
 
 const ProductDetailScreen = (props: DetailsScreenProps) => {
   const {itemId, otherParam} = props.route.params;
-  return (
-    <View>
-      <Text>ProductDetailScreen</Text>
-      <Text>Item ID: {itemId}</Text>
-      <Text>Other Param: {otherParam}</Text>
-    </View>
-  );
-};
+  const [product, setProduct] = useState<IProduct | undefined>();
 
-const ProductDetailScreenSample = (props: DetailsScreenProps) => {
-  const {itemId, otherParam} = props.route.params;
+  useEffect(() => {
+    const productData = products[itemId];
+
+    setProduct(productData);
+  }, [itemId]);
+
   return (
     <View>
       {/* Slider */}
       <View style={styles.sliderContainer}></View>
       <View style={styles.BottomContainer}>
         <View style={styles.titleSection}>
-          <Text style={styles.productName}>Air Jordan 3 Retro</Text>
+          <Text style={styles.productName}>{product?.name}</Text>
           <Icon name="cards-heart-outline" size="extraLarge" color="white" />
         </View>
         <View style={styles.reviewSection}>
           <BrandBadge brandName="apple" />
           <Icon name="cards-heart-outline" size="extraLarge" color="white" />
-          <Text style={styles.paragraph}>4.9 (6,573 reviews)</Text>
+          <Text style={styles.paragraph}>
+            {product?.rating} ({product?.reviews} reviews)
+          </Text>
         </View>
         <Divider size={2} horizontal />
         <Text style={styles.subtitle}>Description</Text>
-        <ShowMore height={100}>
-          <Text style={styles.paragraph}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-            beatae ratione a blanditiis nisi sapiente hic dicta exercitationem,
-            sunt voluptatum?
-          </Text>
+        <ShowMore trimHeight={100}>
+          <Text style={styles.paragraph}>{product?.description}</Text>
         </ShowMore>
         <Spacer size={20} />
 
@@ -59,9 +56,9 @@ const ProductDetailScreenSample = (props: DetailsScreenProps) => {
         <View style={styles.cartSect}>
           <View>
             <Text>Total price</Text>
-            <Text>$105.00</Text>
+            <Text>{product?.price} </Text>
           </View>
-          <LargeBtn iconname="cards-heart-outline" title="Add to Cart" />
+          <LargeBtn iconName="cards-heart-outline" title="Add to Cart" />
         </View>
       </View>
     </View>
@@ -78,9 +75,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   titleSection: {},
-  productName: {},
+  productName: {
+    color: COLORS.black[1],
+  },
   reviewSection: {},
-  paragraph: {},
-  subtitle: {},
+  paragraph: {
+    color: COLORS.black[1],
+  },
+  subtitle: {
+    color: COLORS.black[1],
+  },
   cartSect: {},
 });
