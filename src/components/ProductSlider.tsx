@@ -119,10 +119,11 @@ const SliderItemStyles = StyleSheet.create({
     justifyContent: 'center',
     width,
     height: containerHeight,
+    
   },
   sliderImage: {
-    flex: 0.9,
-    width: '100%',
+    flex: 1,
+    width: 500,
   },
 });
 
@@ -152,7 +153,7 @@ const SliderPagination = ({data, scrollX, index}: SliderPaginationProps) => {
 
         const backgroundColor = scrollX.interpolate({
           inputRange,
-          outputRange: ['#cccc', '#000', '#cccc'],
+          outputRange: ['#878787', '#000', '#878787'],
           extrapolate: 'clamp',
         });
         return (
@@ -183,7 +184,7 @@ const SliderPaginationStyles = StyleSheet.create({
     height: 12,
     borderRadius: 6,
     marginHorizontal: 3,
-    backgroundColor: '#cccc',
+    backgroundColor: '#878787',
   },
   dotActive: {
     backgroundColor: '#000',
