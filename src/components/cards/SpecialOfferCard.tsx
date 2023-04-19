@@ -12,7 +12,7 @@ type Props = {
 const SpecialOfferCard = (props: Props) => {
   return (
     <View style={[styles.container, styles.shadowProp]}>
-      <View style={styles.leftcontainer}>
+      <View style={styles.leftContainer}>
         <Text style={styles.percentage}>{props.percentage}%</Text>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.message}>{props.message}</Text>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2.54,
     elevation: 3,
   },
-  leftcontainer: {
+  leftContainer: {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     height: '100%',
