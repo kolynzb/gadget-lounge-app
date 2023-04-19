@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import {Text} from '../layout';
 import Icon, {IconProps} from '../layout/Icon';
+import COLORS from '../../constants/colors';
 
 interface CustomButtonProps extends TouchableOpacityProps {
   title: string;
@@ -36,14 +37,18 @@ const LargeBtn: FC<CustomButtonProps> = ({
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: '#007AFF',
-    padding: 10,
-    borderRadius: 5,
+    backgroundColor: COLORS.black[1],
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    borderRadius: 50,
     marginVertical: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   title: {
     fontSize: 16,
     color: '#FFFFFF',
+    paddingLeft: 10,
   },
 });
 
