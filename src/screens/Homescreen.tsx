@@ -36,7 +36,7 @@ const HomeScreen = (props: Props) => {
           percentage={20}
           title="Today's Special!"
           message="Get discount for every order, only valid for today"
-          image="https://res.cloudinary.com/kolynz-b/image/upload/v1638636909/ko.lynz_b_218871186_831566384142117_7643572219233961744_n_wcsj3e.jpg"
+          image="https://res.cloudinary.com/kolynz-b/image/upload/v1681945494/oscar-nord-8l9VxXI28tY-unsplash-removebg-preview_cnedqm.png"
         />
         <Spacer size={20} />
 
