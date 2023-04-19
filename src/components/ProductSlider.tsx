@@ -135,7 +135,7 @@ type SliderPaginationProps = {
 const SliderPagination = ({data, scrollX, index}: SliderPaginationProps) => {
   return (
     <View style={SliderPaginationStyles.container}>
-      {data.map((_: any, idx: number) => {
+      {data?.map((_: any, idx: number) => {
         const inputRange = [(idx - 1) * width, idx * width, (idx + 1) * width];
 
         const dotWidth = scrollX.interpolate({
