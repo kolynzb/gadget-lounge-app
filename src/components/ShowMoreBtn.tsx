@@ -69,11 +69,9 @@ const ShowMore: React.FC<ShowMoreProps> = ({
         onPress={() => {
           showMoreBoxIsOpened ? onPressShowLess() : onPressShowMore();
         }}>
-        <View>
-          <Text style={{color: buttonColor}}>
-            {showMoreBoxIsOpened ? showLessText : showMoreText}
-          </Text>
-        </View>
+        <Text style={{color: buttonColor,fontWeight:"bold"}}>
+          {showMoreBoxIsOpened ? showLessText : showMoreText}
+        </Text>
       </TouchableOpacity>
     </View>
   );
