@@ -3,13 +3,13 @@ import React from 'react';
 import colors from '../../constants/colors';
 
 type Props = {
-  brandname: string;
+  brandName: string;
 };
 
-const BrandBadge = ({brandname}: Props) => {
+const BrandBadge = ({brandName}: Props) => {
   return (
-    <View style={styles.brandcontainer}>
-      <Text style={styles.brand}>{brandname}</Text>
+    <View style={styles.brandContainer}>
+      <Text style={styles.brand}>{brandName}</Text>
       
     </View>
   );
@@ -18,7 +18,7 @@ const BrandBadge = ({brandname}: Props) => {
 export default BrandBadge;
 
 const styles = StyleSheet.create({
-  brandcontainer: {
+  brandContainer: {
     backgroundColor: colors.gray[1],
     paddingVertical: 2,
     paddingHorizontal: 10,
