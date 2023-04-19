@@ -24,7 +24,6 @@ import products from '../data/products';
 import ProductSlider from '../components/ProductSlider';
 import formatMoney from '../utils/formatMoney';
 import QuantityBtn from '../components/buttons/QuantityBtn';
-import {BottomTabBar} from '@react-navigation/bottom-tabs';
 
 type DetailsScreenProps = {
   route: DetailsScreenRouteProps;
