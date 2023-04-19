@@ -12,3 +12,4 @@
 - [Phone slider](https://youtu.be/ucpoqa2-74s)
 - [Sliders](https://youtu.be/2TgArwz6je8)
 - [Simple JavaScript currency conversion library](http://openexchangerates.github.io/money.js/)
+- [Background remover](https://removal.ai/#)
