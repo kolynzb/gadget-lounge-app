@@ -13,13 +13,14 @@ const Divider = ({
   size,
   backgroundColor = COLORS.gray['1'],
 }: Props) => {
-  const defaultSizeValue = 'auto';
+  // const defaultSizeValue = 'auto';
+  const defaultSizeValue = '100%';
 
   return (
     <View
       style={{
-        width: horizontal ? size : defaultSizeValue,
-        height: !horizontal ? size : defaultSizeValue,
+        width: !horizontal ? size : defaultSizeValue,
+        height: horizontal ? size : defaultSizeValue,
         backgroundColor,
       }}
     />
