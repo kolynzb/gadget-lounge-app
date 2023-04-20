@@ -11,10 +11,11 @@ import {CompositeScreenProps} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from './RootTabNavigator';
 import Icon from '../components/layout/Icon';
+import BrandScreen from '../screens/BrandScreen';
 
 export type RootTabParamList = {
   Home: undefined;
-  Tickets: undefined;
+  Brands: undefined;
   Location: undefined;
   Profile: undefined;
 };
@@ -73,10 +74,10 @@ function BottomTabNavigator() {
         })}
       />
       <Tab.Screen
-        name="Tickets"
-        component={TicketScreen}
+        name="Brands"
+        component={BrandScreen}
         options={{
-          title: 'Tickets',
+          title: 'Brands',
           tabBarIcon: ({color}) => (
             <TabBarIcon name="ticket-confirmation-outline" color={color} />
           ),
