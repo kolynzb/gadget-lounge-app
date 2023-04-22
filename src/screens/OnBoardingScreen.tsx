@@ -15,7 +15,7 @@ import Animated, {
   Extrapolate,
   interpolate,
 } from 'react-native-reanimated';
-import {IOnboardingScreen} from '../interfaces/onboarding.interface';
+import {IOnboardingPage} from '../interfaces/onboarding.interface';
 import COLORS from '../constants/colors';
 import {Icon, Text, View} from '../components/layout';
 import {ONBOARDINGPAGES} from '../data/onboarding';
@@ -117,7 +117,7 @@ export default OnBoardingScreen;
 
 // Page
 interface OnBoardingPageProps {
-  page: IOnboardingScreen;
+  page: IOnboardingPage;
   translateX: Animated.SharedValue<number>;
   index: number;
 }
