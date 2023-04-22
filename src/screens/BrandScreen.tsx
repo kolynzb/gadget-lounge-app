@@ -15,7 +15,7 @@ import {IBrand} from '../interfaces/brand.interface';
 
 const {width, height} = Dimensions.get('window');
 const MIN_HEIGHT = 128;
-export const MAX_HEIGHT = height / 2;
+const MAX_HEIGHT = height / 2;
 const itemStyles = StyleSheet.create({
   container: {
     width,
