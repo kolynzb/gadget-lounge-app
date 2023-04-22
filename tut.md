@@ -13,3 +13,5 @@
 - [Sliders](https://youtu.be/2TgArwz6je8)
 - [Simple JavaScript currency conversion library](http://openexchangerates.github.io/money.js/)
 - [Background remover](https://removal.ai/#)
+- [](https://blog.logrocket.com/smooth-animations-react-native-reanimated-3/)
+- [react native reanimated fix]()
