@@ -4,10 +4,19 @@ import { Text, View } from "../layout";
 import colors from "../../constants/colors";
 import truncateString from "../../utils/truncateString";
 import BrandBadge from "../badges/BrandBadge";
-import { Link } from "expo-router";
+import { TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../navigation/RootTabNavigator";
+import { CompositeNavigationProp } from "@react-navigation/native";
+
+type ProductCardNavigationProp = CompositeNavigationProp<
+  NativeStackNavigationProp<RootStackParamList, "ProductDetails">,
+  NativeStackNavigationProp<RootStackParamList>
+>;
 
 type Props = {
+  navigation: ProductCardNavigationProp;
   product: {
     id: number;
     name: string;
@@ -19,10 +28,16 @@ type Props = {
 };
 
 const ProductCard = (props: Props) => {
-  const { product } = props;
+  const { navigation, product } = props;
 
+  const handlePress = () => {
+    navigation.navigate("ProductDetails", {
+      itemId: product.id,
+      otherParam: product.name,
+    });
+  };
   return (
-    <Link href={`/products/${product.id}`}>
+    <TouchableOpacity onPress={handlePress}>
       <View style={styles.container}>
         <View style={styles.imgContainer}>
           <Image style={styles.image} source={{ uri: product.image }} />
@@ -41,7 +56,7 @@ const ProductCard = (props: Props) => {
           <Text style={styles.price}>UGX{product.price}</Text>
         </View>
       </View>
-    </Link>
+    </TouchableOpacity>
   );
 };
 

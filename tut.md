@@ -16,3 +16,7 @@
 - [](https://blog.logrocket.com/smooth-animations-react-native-reanimated-3/)
 - [react native reanimated fix]()
 - [Add expo](https://youtu.be/Ua8-N-iZ9cM)
+- [expo router](https://youtu.be/yyGS0adZdsU)
+- https://blog.logrocket.com/create-react-native-search-bar-from-scratch/
+- https://start-react-native.dev/
+- [SearchBAR](https://github.dev/kevintomas1995/logRocket_searchBar)
